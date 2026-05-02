@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSIVITY GACOR VVIP - BY LANGZZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@900&family=Rajdhani:wght@700&display=swap');
+
+        :root {
+            --neon-blue: #00f2ff;
+            --deep-blue: #0044ff;
+            --dark-bg: #000105;
+            --neon-red: #ff0050;
+            --neon-yellow: #fff200;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .stars-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: radial-gradient(circle at center, #000816 0%, #000 100%);
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle var(--d) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.4); }
+        }
+
+        .ui-panel {
+            width: 95vw;
+            max-width: 420px;
+            height: 92vh;
+            background: rgba(0, 5, 15, 0.95);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            overflow: hidden;
+        }
+
+        /* WATERMARK */
+        .main-watermark {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 8px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+            z-index: 1; 
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .top-bar {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+            background: rgba(0, 242, 255, 0.05);
+            z-index: 100;
+        }
+
+        .close-btn {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 0, 80, 0.2);
+            border: 2px solid var(--neon-red);
+            border-radius: 10px;
+            color: var(--neon-red);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.2s;
+            box-shadow: 0 0 10px var(--neon-red);
+        }
+
+        .title-container {
+            margin: 15px 0;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .title-top { font-family: 'Orbitron'; font-size: 1.5rem; text-shadow: 0 0 10px var(--neon-blue); }
+        .title-bottom { font-family: 'Orbitron'; font-size: 2.2rem; color: var(--neon-blue); text-shadow: 0 0 20px var(--neon-blue); line-height: 1; }
+
+        .warning-zone {
+            background: rgba(255, 0, 80, 0.15);
+            border-top: 1px solid var(--neon-red);
+            border-bottom: 1px solid var(--neon-red);
+            padding: 8px 0;
+            margin: 5px 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .marquee-text {
+            white-space: nowrap;
+            font-size: 12px;
+            color: var(--neon-yellow);
+            font-weight: bold;
+            animation: marquee 10s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .content-wrap {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+            position: relative;
+            z-index: 50;
+        }
+
+        .btn-action {
+            width: 100%;
+            padding: 16px;
+            background: var(--neon-blue);
+            color: #000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 9px;
+            border-radius: 12px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+            margin-bottom: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .input-style {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--deep-blue);
+            padding: 15px;
+            border-radius: 12px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        .c-link {
+            padding: 12px 5px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 9px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+            display: block;
+            border: 1.5px solid transparent;
+        }
+
+        .c-wa { background: rgba(37, 211, 102, 0.1); color: #25D366; border-color: #25D366; }
+        .c-tt { background: rgba(255, 0, 80, 0.1); color: var(--neon-red); border-color: var(--neon-red); }
+        .c-link:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+        .hidden { display: none !important; }
+
+        #custom-alert {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-modal {
+            width: 85%;
+            background: #000;
+            border: 2px solid var(--neon-blue);
+            padding: 30px;
+            border-radius: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="stars-field" class="stars-bg"></div>
+
+    <!-- Pahibalo UI -->
+    <div id="custom-alert">
+        <div class="alert-modal">
+            <p id="alert-msg" class="text-cyan-400 font-bold mb-6 uppercase text-[10px] leading-relaxed"></p>
+            <button onclick="closeAlert()" class="btn-action !mb-0 !bg-white">SABOT NAKO</button>
+        </div>
+    </div>
+
+    <div class="ui-panel">
+        <div class="main-watermark">BY: LangZz</div>
+
+        <div class="top-bar justify-between">
+            <span class="text-[10px] text-cyan-500 font-bold tracking-widest uppercase">VVIP_V4.0_LANGZZ</span>
+            <div id="top-close-btn" class="close-btn hidden" onclick="goBack()">X</div>
+        </div>
+
+        <div class="content-wrap">
+            <div class="title-container">
+                <div class="title-top">SENSIVITY</div>
+                <div class="title-bottom">GACOR</div>
+            </div>
+
+            <div class="warning-zone">
+                <div class="marquee-text">
+                    SENSIVITY VVIP PRIVATE !!! — FOLLOW TIKTOK @LANGZZ_ELITE & @XY_YOKZ02 — AYAW I-SHARE KINI NGA SENSIVITY!
+                </div>
+            </div>
+
+            <!-- Login View -->
+            <section id="view-login" class="mt-8">
+                <input type="password" id="main-key" class="input-style" placeholder="ISELOD ANG KEY">
+                <button onclick="handleLogin()" class="btn-action">INITIALIZE VVIP</button>
+                
+                <div class="mt-4">
+                    <p class="text-center text-[8px] text-zinc-500 mb-3 tracking-widest font-bold">DEVELOPER CONTACT</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://wa.me/62882005257905" target="_blank" class="c-link c-wa">WA ADMIN 1</a>
+                        <a href="https://wa.me/6285601425735" target="_blank" class="c-link c-wa">WA ADMIN 2</a>
+                        
+                        <a href="https://www.tiktok.com/@langzz_elite" target="_blank" class="c-link c-tt">TIKTOK 1</a>
+                        <a href="https://www.tiktok.com/@xy_yokz02?_r=1&_t=ZS-961EpmkPVa9" target="_blank" class="c-link c-tt">TIKTOK 2</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Select Game View -->
+            <section id="view-select" class="hidden mt-6">
+                <p class="text-center text-cyan-500 font-bold mb-5 text-[10px]">PILI-A ANG BERSIYON SA GAME</p>
+                <div class="grid gap-4">
+                    <div class="p-6 bg-blue-900/10 border-2 border-blue-900/30 rounded-2xl text-center cursor-pointer hover:border-cyan-400" onclick="openDash('ORI')">
+                        <p class="text-white font-bold text-lg">FF ORIGINAL</p>
+                    </div>
+                    <div class="p-6 bg-red-900/10 border-2 border-red-900/30 rounded-2xl text-center cursor-pointer hover:border-red-400" onclick="openDash('MAX')">
+                        <p class="text-white font-bold text-lg">FF MAX</p>
+                    </div>
+                </div>
+                <button onclick="logout()" class="w-full mt-6 p-4 border border-zinc-800 rounded-xl text-[10px] text-zinc-500 font-bold uppercase">Gawas / Logout</button>
+            </section>
+
+            <!-- Dashboard View -->
+            <section id="view-dash" class="hidden">
+                <input type="text" id="search-hp" oninput="searchData()" class="input-style !text-left" placeholder="PANGITA-A ANG TIPE SA HP...">
+                <div id="results" class="bg-black border border-blue-900 hidden mb-4 max-h-40 overflow-y-auto rounded-xl"></div>
+
+                <div class="bg-cyan-900/10 border border-cyan-500/30 p-4 rounded-xl text-center mb-4">
+                    <h2 id="disp-brand" class="text-2xl font-black italic text-cyan-400">DEVICES</h2>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">DPI</div>
+                        <div id="v-dpi" class="text-cyan-400 font-bold">0</div>
+                    </div>
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">GENERAL</div>
+                        <div id="s1" class="font-bold">0</div>
+                    </div>
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">RED DOT</div>
+                        <div id="s2" class="font-bold">0</div>
+                    </div>
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">2X SCOPE</div>
+                        <div id="s3" class="font-bold">0</div>
+                    </div>
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">4X SCOPE</div>
+                        <div id="s4" class="font-bold">0</div>
+                    </div>
+                    <div class="bg-black/40 border border-zinc-800 p-3 rounded-lg text-center">
+                        <div class="text-[8px] text-zinc-500 mb-1 uppercase">AWM</div>
+                        <div id="s5" class="font-bold">0</div>
+                    </div>
+                </div>
+
+                <button onclick="showAlert('SENSIVITY VVIP NAGMALAMPUSON SA PAG-APPLY!')" class="btn-action">I-AKTIBAR ANG SENSIVIDAD</button>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Animasyon sa bituon sa background
+        const field = document.getElementById('stars-field');
+        for(let i=0; i<60; i++){
+            const s = document.createElement('div');
+            s.className = 'star';
+            const size = Math.random()*2+1;
+            s.style.width = size+'px'; s.style.height = size+'px';
+            s.style.left = Math.random()*100+'%'; s.style.top = Math.random()*100+'%';
+            s.style.setProperty('--d', (Math.random()*4+1)+'s');
+            field.appendChild(s);
+        }
+
+        const KEY_USER = "LangZz ganteng bgt";
+        let currentView = "login";
+
+        function showView(id) {
+            document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(`view-${id}`).classList.remove('hidden');
+            currentView = id;
+            const closeBtn = document.getElementById('top-close-btn');
+            if(id === 'login') closeBtn.classList.add('hidden');
+            else closeBtn.classList.remove('hidden');
+        }
+
+        function handleLogin() {
+            const val = document.getElementById('main-key').value;
+            if(val === KEY_USER) {
+                showView('select');
+            } else {
+                showAlert("SAYOP ANG KEY! KONTAK ANG ADMIN LANGZZ.");
+            }
+        }
+
+        function goBack() {
+            if(currentView === 'dash') showView('select');
+            else if(currentView === 'select') showView('login');
+        }
+
+        function logout() {
+            showView('login');
+            document.getElementById('main-key').value = "";
+        }
+
+        function openDash(m) {
+            showView('dash');
+            updateUI("VIVO");
+        }
+
+        function showAlert(msg) {
+            document.getElementById('alert-msg').innerText = msg;
+            document.getElementById('custom-alert').style.display = 'flex';
+        }
+
+        function closeAlert() {
+            document.getElementById('custom-alert').style.display = 'none';
+        }
+
+        // Database sa Sensividad
+        const db = {
+            "VIVO": {s:[100,95,100,100,50], d:480},
+            "OPPO": {s:[98,92,100,100,60], d:450},
+            "XIAOMI": {s:[100,100,100,100,70], d:411},
+            "REALME": {s:[95,95,98,100,55], d:420},
+            "SAMSUNG": {s:[90,85,90,95,45], d:390},
+            "INFINIX": {s:[100,98,100,100,80], d:520},
+            "IPHONE": {s:[100,100,100,100,100], d:"None"}
+        };
+
+        function updateUI(brand) {
+            const data = db[brand] || db["VIVO"];
+            document.getElementById('disp-brand').innerText = brand;
+            document.getElementById('v-dpi').innerText = data.d;
+            data.s.forEach((v, i) => document.getElementById(`s${i+1}`).innerText = v);
+        }
+
+        function searchData() {
+            const v = document.getElementById('search-hp').value.toUpperCase();
+            const r = document.getElementById('results');
+            if(!v) { r.classList.add('hidden'); return; }
+            const keys = Object.keys(db).filter(k => k.includes(v));
+            if(keys.length > 0) {
+                r.innerHTML = "";
+                keys.forEach(k => {
+                    const d = document.createElement('div');
+                    d.className = "p-3 text-[10px] border-b border-zinc-800 cursor-pointer hover:bg-blue-500/20";
+                    d.innerText = k;
+                    d.onclick = () => { updateUI(k); r.classList.add('hidden'); };
+                    r.appendChild(d);
+                });
+                r.classList.remove('hidden');
+            } else r.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
